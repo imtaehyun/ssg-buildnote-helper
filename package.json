@@ -1,0 +1,8 @@
+{
+  "name": "ssg_buildnote_helper",
+  "version": "0.0.2",
+  "devDependencies": {
+    "browser-sync": "^2.2.2",
+    "gulp": "^3.8.11"
+  }
+}
