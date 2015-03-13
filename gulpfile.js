@@ -20,18 +20,12 @@ gulp.task('serve', function() {
 	browserSync({
 		server: {
 			baseDir: './dist'
-		}
+		},
+		open: false
 	});
 
-	gulp.watch('app/*.html').on('change', function() {
-		gulp.run('html');
-		browserSync.reload;
-	});
-	gulp.watch(['app/js/*.js', 'app/css/*.css'], function() {
-		gulp.run('js');
-		gulp.run('css');
-		browserSync.reload;
-	});
+	gulp.watch(['app/*.html'], ['html', browserSync.reload]);
+	gulp.watch(['app/js/*.js', 'app/css/*.css'], ['js', 'css', browserSync.reload]);
 });
 
 gulp.task('default', ['html', 'js', 'css', 'serve']);
