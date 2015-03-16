@@ -14,7 +14,6 @@
         $scope.buildNote = {};
 
         $scope.task = {}; // Redmine Task 정보
-        $scope.task.id = '112252';
         $scope.sql = {}; // SQL 
         $scope.dependency = {system: '', scope: ''};
 
