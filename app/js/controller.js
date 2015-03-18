@@ -43,23 +43,23 @@
             $scope.distSystemList = distSystemList;
         }
 
-        $.ajax({
-            url: 'http://redmine.ssgadm.com/redmine/users/current.json',
-            type: 'get',
-            dataType: 'jsonp',
-            xhrFields: {
-                withCredentials: true
-            },
-            crossDomain: true,
-            error: function(xhr, ajaxOptions, thrownError) {
-                console.error('Invalid username or password. Please try again.');
-            },
-            success: function(result) {
-                $scope.user = result.user;
+        // $.ajax({
+        //     url: 'http://redmine.ssgadm.com/redmine/users/current.json',
+        //     type: 'get',
+        //     dataType: 'jsonp',
+        //     xhrFields: {
+        //         withCredentials: true
+        //     },
+        //     crossDomain: true,
+        //     error: function(xhr, ajaxOptions, thrownError) {
+        //         console.error('Invalid username or password. Please try again.');
+        //     },
+        //     success: function(result) {
+        //         $scope.user = result.user;
 
-                $scope.$apply();
-            }
-        });     
+        //         $scope.$apply();
+        //     }
+        // });     
 
         function redmineSearch(type) {
             $.ajax({

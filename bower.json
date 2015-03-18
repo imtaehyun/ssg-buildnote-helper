@@ -1,0 +1,20 @@
+{
+  "name": "ssg-buildnote-helper",
+  "version": "0.0.2",
+  "homepage": "https://github.com/imtaehyun/ssg-buildnote-helper",
+  "authors": [
+    "nezz <imtaehyun@me.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularytics": "~0.3.0",
+    "angulartics": "~0.17.2"
+  }
+}
