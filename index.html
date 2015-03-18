@@ -17,7 +17,7 @@
 						<h4>ssg buildnote helper for developer</h4>	
 					</div>
 					<div class="col-md-6">
-						<a href="#" class="btn pull-right" data-toggle="modal" data-target="#setting"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings</a>
+						<a href="#" class="btn pull-right" data-toggle="modal" data-target="#setting" analytics-on analytics-event="Open Settings" analytics-category="Settings" analytics-label="Open Settings"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings</a>
 					</div>
 				</div>
 			</div>
@@ -29,7 +29,7 @@
 					<div class="input-group">
 						<input type="text" class="form-control" placeholder="Redmine #" ng-model="task.id">
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button" ng-click="redmineSearch('task')"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+							<button class="btn btn-default" type="button" ng-click="redmineSearch('task')"><span class="glyphicon glyphicon-search" aria-hidden="true" analytics-on analytics-event="Search" analytics-category="Buildnote" analytics-label="Search Redmine task"></span></button>
 						</span>
 					</div>
 				</div>
@@ -144,7 +144,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<button class="btn btn-danger btn-block" ng-click="buildComplete()" data-toggle="modal" data-target="#buildNote">등록</button>
+					<button class="btn btn-danger btn-block" ng-click="buildComplete()" data-toggle="modal" data-target="#buildNote" analytics-on analytics-event="Prepare" analytics-category="Buildnote" analytics-label="Prepare to register">등록</button>
 				</div>
 			</div>
 			<div class="modal fade" id="buildNote">
@@ -166,7 +166,7 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary" ng-click="register()">레드마인에 등록</button>
+							<button type="button" class="btn btn-primary" ng-click="register()" analytics-on analytics-event="Register" analytics-category="Buildnote" analytics-label="Register to Redmine">레드마인에 등록</button>
 						</div>
 					</div>
 				</div>
@@ -203,7 +203,7 @@
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" ng-click="reset()">초기화</button>
 							<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-							<button type="button" class="btn btn-primary" ng-click="save()">저장</button>
+							<button type="button" class="btn btn-primary" ng-click="save()" analytics-on analytics-event="Save" analytics-category="Settings" analytics-label="Save Settings">저장</button>
 						</div>
 					</div>
 				</div>
@@ -223,6 +223,8 @@
 		<script src="./js/store.min.js"></script>
 		<script src="./js/checklist-model.js"></script>
 		<script src="./js/authorList.js"></script>
+		<script src="./js/angulartics.min.js"></script>
+		<script src="./js/angulartics-ga.min.js"></script>
 		<script src="./js/app.js"></script>
 		<script src="./js/constants.js"></script>
 		<script src="./js/controller.js"></script>
@@ -233,7 +235,7 @@
 		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 		  ga('create', 'UA-60165471-1', 'auto');
-		  ga('send', 'pageview');
+		  // ga('send', 'pageview');
 		</script>
 		<script type="text/javascript">
 		$(document).ready(function() {
