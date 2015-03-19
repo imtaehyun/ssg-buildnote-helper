@@ -78,7 +78,6 @@
 
                     if (type === 'task') {
                         $scope.task = result.issue;
-                        $scope.requesters.push(result.issue.author.id);
                         $scope.task.qa_date = '';
                     } else {
                         $scope.sql = result.issue;
